@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layanan — Fokuz</title><meta name="description" content="Detail layanan Fokuz.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="detail">
+<div class="wrap detail"><div id="info"></div><aside class="box" id="box"></aside></div>
+<div class="modal" id="modal"><form class="box" id="form">
+  <h2>Checkout</h2><p class="muted" id="sum"></p>
+  <p class="muted" style="font-size:13px">Dipesan oleh: <b id="who"></b></p>
+  <label>Brief / instruksi<textarea name="brief" rows="3" maxlength="1000"></textarea></label>
+  <label>Unggah file referensi (opsional, maks 2 MB)<input type="file" name="file"></label>
+  <label>Metode pembayaran<select name="method" id="payment-method"><option>QRIS</option><option>Transfer Bank</option><option>GoPay</option><option>OVO</option></select></label>
+  <div class="qris-payment" id="qris-payment">
+    <h3>Pembayaran QRIS</h3>
+    <img src="assets/qris.png" alt="Tempat gambar QRIS" width="640" height="440" id="qris-image">
+    <p class="muted" id="qris-unavailable" hidden>Gambar QRIS tidak dapat ditampilkan.</p>
+    <p class="muted">Pastikan nama penerima dan nominal sesuai pesanan sebelum membayar.</p>
+    <p class="note">Mode demo: gambar bawaan bukan kode pembayaran. Tombol Bayar Sekarang hanya menyimulasikan pembayaran.</p>
+  </div>
+  <label style="font-weight:400"><input type="checkbox" required style="width:auto"> Saya setuju dengan <a class="price" href="syarat.html" target="_blank">Syarat & Ketentuan</a></label>
+  <br><button class="btn dark block" id="pay">Bayar Sekarang</button>
+  <button type="button" class="btn block" id="cancel" style="margin-top:8px;background:#fff;border:1px solid var(--border)">Batal</button>
+</form></div>
+<script src="db.js"></script><script src="app.js"></script></body></html>

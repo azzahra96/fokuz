@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Review & Portofolio — FOKUZ</title><meta name="description" content="Lihat contoh hasil karya dan portofolio FOKUZ.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="review">
+<section class="review-hero"><div class="wrap">
+  <span class="pill">Portofolio FOKUZ</span>
+  <h1>Hasil yang bisa kamu lihat.</h1>
+  <p class="muted review-intro">Intip contoh karya untuk kebutuhan akademik, desain, dan karier. Geser untuk melihat lebih banyak.</p>
+</div></section>
+<section class="review-section"><div class="wrap">
+  <div class="row"><div><h2>Showcase karya</h2><p class="muted">Contoh visual untuk inspirasi sebelum mulai brief.</p></div>
+  <div class="slider-controls"><button class="chip" type="button" id="prev-work" aria-label="Portofolio sebelumnya">←</button><button class="chip" type="button" id="next-work" aria-label="Portofolio berikutnya">→</button></div></div>
+  <div class="portfolio-slider" id="portfolio-slider" tabindex="0" aria-label="Slider portofolio">
+    <article class="portfolio-card"><img src="assets/WhatsApp Image 2026-09-30 at 16.22.25.jpeg" alt="Contoh layout laporan akademik"><div class="portfolio-meta"><span class="tag akademik">Akademik</span><h3>Laporan akademik</h3><p>Layout rapi, struktur jelas, dan mudah dibaca.</p></div></article>
+    <article class="portfolio-card"><img src="assets/1_20260602_161552_0000.jpg.jpeg" alt="Contoh desain poster acara"><div class="portfolio-meta"><span class="tag desain">Desain</span><h3>Poster acara</h3><p>Visual berani dengan hierarki informasi yang jelas.</p></div></article>
+    <article class="portfolio-card"><img src="assets/ss logo pemira.png" alt="Contoh konsep identitas logo"><div class="portfolio-meta"><span class="tag desain">Desain</span><h3>Konsep identitas logo</h3><p>Identitas sederhana yang mudah dikenali.</p></div></article>
+    <article class="portfolio-card"><img src="assets/Cuplikan layar 2026-09-30 235539.png" alt="Contoh desain CV profesional"><div class="portfolio-meta"><span class="tag karier">CV & Karier</span><h3>CV profesional</h3><p>Informasi tersusun dengan tampilan bersih.</p></div></article>
+  </div>
+  <div class="slider-progress" aria-hidden="true"><span id="slider-progress-bar"></span></div>
+</div></section>
+<section class="review-cta"><div class="wrap"><div class="navy"><h2>Punya project serupa?</h2><p style="margin:10px 0 22px;opacity:.8">Ceritakan kebutuhanmu, lalu konsultasikan detailnya lewat WhatsApp.</p><a class="btn" href="layanan.html">Pilih Layanan →</a></div></div></section>
+<script src="db.js"></script><script src="app.js"></script>
+<script>
+(() => {
+ const slider = document.getElementById('portfolio-slider');
+ const progress = document.getElementById('slider-progress-bar');
+ const update = () => { const max = slider.scrollWidth - slider.clientWidth; progress.style.width = (max <= 0 ? 100 : Math.max(10, slider.scrollLeft / max * 100)) + '%'; };
+ document.getElementById('prev-work').addEventListener('click', () => slider.scrollBy({left:-340,behavior:'smooth'}));
+ document.getElementById('next-work').addEventListener('click', () => slider.scrollBy({left:340,behavior:'smooth'}));
+ slider.addEventListener('scroll', update, {passive:true}); window.addEventListener('resize', update); update();
+})();
+</script></body></html>
