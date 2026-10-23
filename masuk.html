@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Masuk — Fokuz</title><meta name="description" content="Masuk atau daftar akun Fokuz.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="masuk">
+<section><div class="wrap" style="max-width:440px"><div class="box" style="position:static">
+  <h2 id="title">Masuk</h2>
+  <div class="chips" id="tabs" style="margin:16px 0 0"><button class="chip" data-t="login">Masuk</button><button class="chip" data-t="daftar">Daftar</button></div>
+  <form id="login"><label>Email<input name="email" type="email" required maxlength="255" autocomplete="email"></label>
+    <label>Kata sandi<input name="password" type="password" required maxlength="100" autocomplete="current-password"></label><br><button class="btn dark block">Masuk</button></form>
+  <form id="daftar"><label>Nama lengkap<input name="name" required maxlength="100" autocomplete="name"></label>
+    <label>Email<input name="email" type="email" required maxlength="255" autocomplete="email"></label>
+    <label>Kata sandi (min. 6 karakter)<input name="password" type="password" required minlength="6" maxlength="100" autocomplete="new-password"></label><br><button class="btn dark block">Buat Akun</button></form>
+  <p id="err" style="color:#C0392B;font-size:14px;margin-top:12px"></p>
+  <p id="ok" style="color:var(--mint-deep);font-size:14px;font-weight:600"></p>
+  <p class="muted" id="hint" style="font-size:13px;margin-top:8px"></p>
+</div></div></section>
+<script src="vendor/supabase.js"></script><script src="config.js"></script><script src="pay-rules.js"></script><script src="db.js"></script><script src="app.js"></script></body></html>
