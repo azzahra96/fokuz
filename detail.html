@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layanan — Fokuz</title><meta name="description" content="Detail layanan Fokuz.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="detail">
+<div class="wrap detail"><div id="info"><p class="muted">Memuat layanan…</p></div><aside class="box" id="box"></aside></div>
+<div class="modal" id="modal"><form class="box" id="form">
+  <h2>Checkout</h2><p class="muted" id="sum"></p>
+  <p class="muted" style="font-size:13px">Dipesan oleh: <b id="who"></b></p>
+  <label>Brief / instruksi<textarea name="brief" rows="3" maxlength="1000"></textarea></label>
+  <label>Unggah file referensi (opsional, maks 10 MB)<input type="file" name="file"></label>
+  <p class="note" style="font-size:13px">Setelah pesanan dibuat, kamu akan memilih metode pembayaran, melihat QRIS atau instruksi transfer, lalu mengunggah bukti pembayaran. Pesanan dikerjakan setelah admin menyetujui pembayaranmu.</p>
+  <label style="font-weight:400"><input type="checkbox" required style="width:auto"> Saya setuju dengan <a class="price" href="syarat.html" target="_blank">Syarat & Ketentuan</a></label>
+  <br><button class="btn dark block" id="pay">Buat Pesanan & Lanjut Bayar</button>
+  <button type="button" class="btn block" id="cancel" style="margin-top:8px;background:#fff;border:1px solid var(--border)">Batal</button>
+</form></div>
+<script src="vendor/supabase.js"></script><script src="config.js"></script><script src="pay-rules.js"></script><script src="db.js"></script><script src="app.js"></script></body></html>
